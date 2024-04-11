@@ -34,19 +34,16 @@ def index():
 def predict():
     file = request.files["file"]
 
-    # Preprocess the uploaded image
-    img = PIL.Image.open(io.BytesIO(file.read()))
+    img = PIL.Image.open(io.BytesIO(file.read())) # type: ignore
     img = img.resize((100, 100))
     img_arr = image.img_to_array(img)
     img_arr = np.expand_dims(img_arr, axis=0)
     img_arr /= 255.0
 
-    # Make prediction
-    prediction = model.predict(img_arr)
+    prediction = model.predict(img_arr) # type: ignore
     predicted_class = fruit_names[np.argmax(prediction)]
     confidence = prediction[0][np.argmax(prediction)]
 
-    # Mengembalikan URL gambar dalam respons JSON
     return json.dumps(
         {
             "predicted_class": predicted_class,

@@ -147,7 +147,7 @@
                     <img
                       width="150"
                       height="150"
-                      src="../static/gambar/error-404.png"
+                      src="../static/images/error-404.png"
                       alt="error" />
                   </div>
                   <p class="text-center my-5">Data Not Found</p>
@@ -279,46 +279,43 @@
         datasetSelect.addEventListener("change", function () {
           const selectedOption = datasetSelect.value;
 
-          // Hide all images and containers by default
           imageContainer.style.display = "none";
           confusionMatrixContainer.style.display = "none";
           classificationReportContainer.style.display = "none";
           graphTitleContainer.style.display = "none";
           dataNotFoundContainer.style.display = "none";
 
-          // Check the selected option and display the corresponding images and containers
           if (selectedOption === "80-20") {
             graphTitleContainer.style.display = "block";
             imageContainer.style.display = "block";
-            trainingImage.src = "../static/gambar/80-20/PlotAccuracy.png";
-            validationImage.src = "../static/gambar/80-20/PlotLoss.png";
+            trainingImage.src = "../static/images/80-20/PlotAccuracy.png";
+            validationImage.src = "../static/images/80-20/PlotLoss.png";
             confusionMatrixContainer.style.display = "block";
-            confusionMatrix.src = "../static/gambar/80-20/ConfusionMatrix.png";
+            confusionMatrix.src = "../static/images/80-20/ConfusionMatrix.png";
             classificationReportContainer.style.display = "block";
             classificationReports.src =
-              "../static/gambar/80-20/ClassificationReport.png";
+              "../static/images/80-20/ClassificationReport.png";
           } else if (selectedOption === "60-40") {
             graphTitleContainer.style.display = "block";
             imageContainer.style.display = "block";
-            trainingImage.src = "../static/gambar/60-40/PlotAccuracy.png";
-            validationImage.src = "../static/gambar/60-40/PlotLoss.png";
+            trainingImage.src = "../static/images/60-40/PlotAccuracy.png";
+            validationImage.src = "../static/images/60-40/PlotLoss.png";
             confusionMatrixContainer.style.display = "block";
-            confusionMatrix.src = "../static/gambar/60-40/ConfusionMatrix.png";
+            confusionMatrix.src = "../static/images/60-40/ConfusionMatrix.png";
             classificationReportContainer.style.display = "block";
             classificationReports.src =
-              "../static/gambar/60-40/ClassificationReport.png";
+              "../static/images/60-40/ClassificationReport.png";
           } else if (selectedOption === "70-30") {
             graphTitleContainer.style.display = "block";
             imageContainer.style.display = "block";
-            trainingImage.src = "../static/gambar/70-30/PlotAccuracy.png";
-            validationImage.src = "../static/gambar/70-30/PlotLoss.png";
+            trainingImage.src = "../static/images/70-30/PlotAccuracy.png";
+            validationImage.src = "../static/images/70-30/PlotLoss.png";
             confusionMatrixContainer.style.display = "block";
-            confusionMatrix.src = "../static/gambar/70-30/ConfusionMatrix.png";
+            confusionMatrix.src = "../static/images/70-30/ConfusionMatrix.png";
             classificationReportContainer.style.display = "block";
             classificationReports.src =
-              "../static/gambar/70-30/ClassificationReport.png";
+              "../static/images/70-30/ClassificationReport.png";
           }
-          // Add more conditions for other options if needed
         });
       });
     </script>
